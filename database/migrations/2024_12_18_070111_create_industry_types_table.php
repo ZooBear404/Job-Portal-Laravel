@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('industry_types', function (Blueprint $table) {
             $table->id('industry_type_id');
-            $table->string('name', 40);
+            $table->string('name', 40)->unique();
             $table->timestamps();
         });
     }

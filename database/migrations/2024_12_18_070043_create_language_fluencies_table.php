@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('language_fluencies', function (Blueprint $table) {
             $table->id('language_fluency_id');
-            $table->string('name', 15);
-            $table->integer('value')->default(1);
+            $table->string('name', 15)->unique();
+            $table->integer('value');
             $table->timestamps();
         });
     }

@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id('job_seeker_id');
             $table->string('first_name', 50);
             $table->string('last_name', 50);
-            $table->string('email', 320);
+            $table->string('email', 320)->unique();
             $table->string('gender');
             $table->date('date_of_birth');
             $table->string('password', 255);
