@@ -3,12 +3,13 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Foundation\Auth\User as Authenticable;
+use Illuminate\Notifications\Notifiable;
 
-class admin extends Model
+class admin extends User
 {
     /** @use HasFactory<\Database\Factories\AdminFactory> */
-    use HasFactory;
+    use HasFactory, Notifiable;
 
     protected $table = "admins";
     protected $primaryKey = "admin_id";
@@ -21,6 +22,11 @@ class admin extends Model
     protected $hidden = [
         'password',
         'remember_token',
+    ];
+
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+        'password' => 'hashed',
     ];
 
 }

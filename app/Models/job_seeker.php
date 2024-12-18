@@ -3,9 +3,9 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
-class job_seeker extends Model
+class job_seeker extends User
 {
     /** @use HasFactory<\Database\Factories\JobSeekerFactory> */
     use HasFactory;
@@ -34,6 +34,7 @@ class job_seeker extends Model
     ];
 
     protected $casts = [
+        'email_verified_at' => 'datetime',
         'email' => 'email',
         'date_of_birth' => 'date',
         'password' => 'password',

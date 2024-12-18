@@ -3,9 +3,9 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
-class company extends Model
+class company extends User
 {
     /** @use HasFactory<\Database\Factories\CompanyFactory> */
     use HasFactory;
@@ -35,6 +35,7 @@ class company extends Model
     ];
 
     protected $casts = [
+        'email_verified_at' => 'datetime',
         'founded_year' => 'year',
         'website' => 'url',
         'password' => 'password',
