@@ -10,7 +10,7 @@ class language extends Model
     /** @use HasFactory<\Database\Factories\LanguageFactory> */
     use HasFactory;
 
-    protected $table = "language";
+    protected $table = "languages";
 
     /**
      * The primary key associated with the table.

@@ -10,7 +10,7 @@ class education_level extends Model
     /** @use HasFactory<\Database\Factories\EducationLevelFactory> */
     use HasFactory;
 
-    protected $table = "education_level";
+    protected $table = "education_levels";
 
     /**
      * The primary key associated with the table.

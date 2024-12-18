@@ -10,7 +10,7 @@ class skill extends Model
     /** @use HasFactory<\Database\Factories\SkillFactory> */
     use HasFactory;
 
-    protected $table = "skill";
+    protected $table = "skills";
 
     /**
      * The primary key associated with the table.

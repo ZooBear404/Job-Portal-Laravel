@@ -11,7 +11,7 @@ class institute extends Model
     use HasFactory;
 
         //
-    protected $table = "institute";
+    protected $table = "institutes";
 
     /**
      * The primary key associated with the table.

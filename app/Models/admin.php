@@ -10,7 +10,7 @@ class admin extends Model
     /** @use HasFactory<\Database\Factories\AdminFactory> */
     use HasFactory;
 
-    protected $table = "admin";
+    protected $table = "admins";
     protected $primaryKey = "admin_id";
 
     protected $fillable = [
