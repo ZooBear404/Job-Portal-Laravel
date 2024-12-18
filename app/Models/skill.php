@@ -23,5 +23,6 @@ class skill extends Model
 
     protected $fillable = [
         'name',
+        'value',
     ];
 }
