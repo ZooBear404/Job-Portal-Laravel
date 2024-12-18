@@ -18,6 +18,7 @@ return new class extends Migration
             $table->foreignId('employment_type')->constrained('employment_types', 'employment_type_id')->onDelete('cascade')->onUpdate('cascade');
             $table->foreignId('company')->constrained('companies', 'company_id')->onDelete('cascade')->onUpdate('cascade');
             $table->date('start_date');
+            $table->date('end_date');
             $table->text('description');
             $table->timestamps();
         });
